@@ -148,6 +148,7 @@ def solveSIPSim1(beta1, beta2, gamma1, gamma2):
     scatter = plt.scatter(input_sample_values[:,0], input_sample_values[:,1],
                 c=plotting_weights, s = 30)  
     plt.plot([start, end], [start * S0, end * S0], 'k-', color = 'r')
+    plt.title("Qs(" + str(T) + ") Contours on [" + str(beta1) + ", " + str(beta2) + "]X[" + str(gamma1) + "," + str(gamma2) + "]", size = 13)
     plt.gca().set_xlabel(r'$\beta$')
     plt.gca().set_ylabel(r'$\gamma$')
     plt.xlim(beta1, beta2)
@@ -160,9 +161,9 @@ def solveSIPSim1(beta1, beta2, gamma1, gamma2):
 
 
 # Solve on different domains Lambda = [beta1, beta2]x[gamma1, gamma2]
-solveSIP(beta1 = 0, beta2 = 1, gamma1 = 0, gamma2 = 1)
-solveSIP(beta1 = 0.4, beta2 = 0.8, gamma1 = 0.01, gamma2 = 0.4)
-solveSIP(beta1 = 0, beta2 = 1, gamma1 = 0.05, gamma2 = 0.3)
-solveSIP(beta1 = 0.15, beta2 = 0.45, gamma1 = 0.05, gamma2 = 0.3)
+solveSIPSim1(beta1 = 0, beta2 = 1, gamma1 = 0, gamma2 = 1)
+solveSIPSim1(beta1 = 0.4, beta2 = 0.8, gamma1 = 0.01, gamma2 = 0.4)
+solveSIPSim1(beta1 = 0, beta2 = 1, gamma1 = 0.05, gamma2 = 0.3)
+solveSIPSim1(beta1 = 0.15, beta2 = 0.45, gamma1 = 0.05, gamma2 = 0.3)
 
 

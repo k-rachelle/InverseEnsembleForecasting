@@ -87,7 +87,8 @@ def my_SIR_model(parameter_samples):
 
 
 # QoI map 2 (I)
-def my_SIR_model2(parameter_samples):
+def my_SIR_model2(parameter_samples, T):
+        T1 = T0 + T
         if parameter_samples.shape == (2,):
             beta = parameter_samples[0]
             gamma = parameter_samples[1]
@@ -110,7 +111,7 @@ def my_SIR_model2(parameter_samples):
             r_mat[i] = R
             
             
-            QoI[i] = (I[T1-1] - I[T0-1])/T
+            QoI[i] = (I[T1] - I[T0])/T
             # QoI[i] = (I[T1-1])
 
         
@@ -144,6 +145,7 @@ def my_SIR_model3(parameter_samples):
 
         
         return QoI
+
 
 
 
