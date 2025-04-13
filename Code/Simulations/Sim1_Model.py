@@ -4,7 +4,6 @@
 
 import numpy as np
 from scipy.integrate import odeint
-import matplotlib.pyplot as plt
 import Sim1_Initial_Conditions as init_cond
 
 T = init_cond.T
