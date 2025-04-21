@@ -17,6 +17,7 @@ from scipy.stats import uniform
 # Python script containing SIR model
 from Sim1_Model import my_SIR_model  # QoI = (s(T0) - s(T1))/T
 from Sim1_Model import my_SIR_solutions  # s, i, r curves 
+from scipy.stats import gaussian_kde
 
 # Get Initial Conditions
 import Sim1_Initial_Conditions as init_cond
@@ -30,6 +31,7 @@ T1 = init_cond.T1
 
 num_samples = 10000
 num_samples_obs = 10000
+num_resamples = 10000
 
 # =============================================================================
 # Simulation 1
@@ -108,7 +110,7 @@ plt.show()
 # -----------------------------------------------------------------------------
 # Solve SIP
 # -----------------------------------------------------------------------------
-def solveSIPSim1(beta1, beta2, gamma1, gamma2):
+def solveSIPSim1(beta1, beta2, gamma1, gamma2, T_forecast, QoI_forecast):
 
     # Initialize 2-dimensional input parameter sample set object
     input_samples = samp.sample_set(2)
@@ -156,6 +158,25 @@ def solveSIPSim1(beta1, beta2, gamma1, gamma2):
     plt.colorbar(scatter, label = "density")
     plt.tight_layout()
     plt.show() 
+    
+    
+    # -------------------------------------------------------------------------
+    # Resample from solution --------------------------------------------------
+    # -------------------------------------------------------------------------
+    joint_kde = gaussian_kde(input_sample_values.T, weights = weights)
+
+
+    new_samp = joint_kde.resample(num_resamples).T
+    beta_samp = new_samp[:, 0]
+    gamma_samp = new_samp[:, 1]
+
+    # Predict back to initial time to confirm solution can match the observed data
+    #   used in the inversion
+    # pred_q_initial = my_SIR_model(new_samp, T0, T_initial, QoI_initial)
+
+    # Predict to final time
+    pred_q_final = my_SIR_model(new_samp, T0, T_forecast, QoI_forecast)
+
     
     return True 
 
