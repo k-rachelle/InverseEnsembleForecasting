@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = 'empty-project-type'
-recent_files = ['Code\\Simulations\\Simulation1.py', 'Code\\Simulations\\Sim1_Model.py']
+recent_files = ['Code\\Simulations\\Simulation1.py', '..\\..\\Python Scripts\\BET\\BET-master\\KKResearch\\SIR\\Code\\Simulations\\Forecasting\\Forecasting_Inversion.py', 'Code\\Simulations\\Forecasting.py', 'Code\\Simulations\\Forecasting_Model.py']
 
 [main]
 version = 0.2.0
