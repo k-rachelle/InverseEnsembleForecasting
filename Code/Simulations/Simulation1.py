@@ -87,23 +87,23 @@ start = max(gamma1_true, beta1_true)
 end = min(gamma2_true, beta2_true)
 
 input_samples_obs_values = input_samples_obs.get_values()
-# plt.hist2d(input_samples_obs_values[:,0], input_samples_obs_values[:,1], bins = 70)
-# plt.plot([start, end], [start * 1, end * 1], 'k-', color = 'r')
-# plt.gca().set_xlabel(r'$\beta$')
-# plt.gca().set_ylabel(r'$\gamma$')
-# plt.title("Data-Generating Distribution")
-# plt.show()
+plt.hist2d(input_samples_obs_values[:,0], input_samples_obs_values[:,1], bins = 70)
+plt.plot([start, end], [start * 1, end * 1], 'k-', color = 'r')
+plt.gca().set_xlabel(r'$\beta$')
+plt.gca().set_ylabel(r'$\gamma$')
+plt.title("Data-Generating Distribution")
+plt.show()
 
 # =============================================================================
 # Plot first 50 observed i(t)
 # =============================================================================
-# num_curves = 50
-# for i in range(num_curves):
-#     plt.plot(t, i_mat[i], color = 'blue', alpha  = 0.5)
-#     plt.title("First " + str(num_curves) + " Observed i(t)")
-#     plt.xlabel("t")
-#     plt.ylabel("i(t)")
-# plt.show()
+num_curves = 50
+for i in range(num_curves):
+    plt.plot(t, i_mat[i], color = 'blue', alpha  = 0.5)
+    plt.title("First " + str(num_curves) + " Observed i(t)")
+    plt.xlabel("t")
+    plt.ylabel("i(t)")
+plt.show()
 
 # -----------------------------------------------------------------------------
 # Solve SIP
