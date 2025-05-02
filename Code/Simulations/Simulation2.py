@@ -39,9 +39,9 @@ np.random.seed(3)
 # -----------------------------------
 
 beta1_true = 0
-beta2_true = 1
+beta2_true = 0.35
 gamma1_true = 0
-gamma2_true = 1
+gamma2_true = 0.6
 
 
 lambda_true = np.array([[beta1_true, beta2_true],

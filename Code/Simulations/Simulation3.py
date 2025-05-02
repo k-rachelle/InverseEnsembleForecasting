@@ -16,7 +16,7 @@ import bet.sampling.basicSampling as bsam
 import matplotlib.pyplot as plt
 
 # Python script containing SIR model
-import Sim4_Model as model
+import Sim3_Model as model
 t = model.t
 S0 = model.S0
 my_SIR_solutions = model.my_SIR_solutions
@@ -50,9 +50,9 @@ np.random.seed(3)
 # -----------------------------------
 
 beta1_true = 0
-beta2_true = 1
+beta2_true = 0.35
 gamma1_true = 0
-gamma2_true = 1
+gamma2_true = 0.6
 
 
 lambda_true = np.array([[beta1_true, beta2_true],

@@ -113,7 +113,7 @@ def forecastSingleQoI(T_initial, QoI_initial, T_final, QoI_final, pred_q_linspac
     num_samples_obs = 10000
     num_resamples = 10000
     
-    QoI_lab = QoI_initial + "(" + str(T_initial) + ") to " + QoI_final + "(" + str(T_final) + ")"
+    QoI_lab = "Q" + QoI_initial + "(" + str(T_initial) + ") to Q" + QoI_final + "(" + str(T_final) + ")"
     
 
     # -----------------------------------
@@ -122,9 +122,9 @@ def forecastSingleQoI(T_initial, QoI_initial, T_final, QoI_final, pred_q_linspac
     # -----------------------------------
     
     beta1_true = 0
-    beta2_true = 1
+    beta2_true = 0.35
     gamma1_true = 0
-    gamma2_true = 1
+    gamma2_true = 0.6
     
     
     lambda_true = np.array([[beta1_true, beta2_true],
@@ -249,7 +249,7 @@ def forecastTwoQoI(firstT_initial, firstQoI_initial, secondT_initial, secondQoI_
     num_samples_obs = 10000
     num_resamples = 10000
     
-    QoI_lab = "[" + firstQoI_initial + "(" + str(firstT_initial) + "), " + secondQoI_initial + "(" + str(secondT_initial) + ")] to " + QoI_final + "(" + str(T_final) + ")"
+    QoI_lab = "[Q" + firstQoI_initial + "(" + str(firstT_initial) + "), Q" + secondQoI_initial + "(" + str(secondT_initial) + ")] to Q" + QoI_final + "(" + str(T_final) + ")"
 
     # Set "true" domain to generate data; try to reobtain domain
     random.seed(3)
