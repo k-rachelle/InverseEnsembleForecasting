@@ -50,7 +50,7 @@ Draw parameter values from <!-- $\tilde P_\Lambda$ --> <img style="transform: tr
 We use the QoI $Q_S(\lambda, T) = \frac{(S(T_0) - S(T_0 + T)}{T}$ (the additional infections that occurred within a time period $[T_0,  T_0 + T]$, scaled by $T$) and explore different choices of sample space <!-- $\Lambda$ --> <img style="transform: translateY(0.1em); background: white;" src="svg\cE5vTCvAew.svg"> on the solution. We use $T = 30$ and $T_0  = 10$.
 
 #### Simulation2.py 
-We use a new QoI  $Q_I(\lambda, T) = \frac{(I(T_0 + T) - I(T_0)}{T}$ (the difference in $\textit active$ infections between the two times) and explore different choices in observation time $T$. We use the sample space $[0, 0.35]X[0,0.6] $ and $T_0  = 10$.
+We use a new QoI  $Q_I(\lambda, T) = \frac{(I(T_0 + T) - I(T_0)}{T}$ (the difference in $\textit active$ infections between the two times) and explore different choices in observation time $T$. We use the sample space $[0, 0.35]X[0,0.6]$ and $T_0  = 10$.
 
 #### Simulation3.py 
 We use two-dimensional QoI by 1. combining information from both the susceptible and infectious populations at time $T$, and 2. using information from the susceptible populations at two time points. We use the sample space $[0, 0.35]X[0,0.6] $ and $T_0  = 10$, $T = 30$, $T_A  = 30$, and $T_B  = 31$.
