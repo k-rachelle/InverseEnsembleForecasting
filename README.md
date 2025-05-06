@@ -53,7 +53,7 @@ We use the QoI $Q_S(\lambda, T) = \frac{(S(T_0) - S(T_0 + T)}{T}$ (the additiona
 We use a new QoI  $Q_I(\lambda, T) = \frac{(I(T_0 + T) - I(T_0)}{T}$ (the difference in $\textit active$ infections between the two times) and explore different choices in observation time $T$. We use the sample space $[0, 0.35]X[0,0.6]$ and $T_0  = 10$.
 
 #### Simulation3.py 
-We use two-dimensional QoI by 1. combining information from both the susceptible and infectious populations at time $T$, and 2. using information from the susceptible populations at two time points. We use the sample space $[0, 0.35]X[0,0.6] $ and $T_0  = 10$, $T = 30$, $T_A  = 30$, and $T_B  = 31$.
+We use two-dimensional QoI by 1. combining information from both the susceptible and infectious populations at time $T$, and 2. using information from the susceptible populations at two time points. We use the sample space $[0, 0.35]X[0,0.6]$ and $T_0  = 10$, $T = 30$, $T_A  = 30$, and $T_B  = 31$.
 
 <!-- $$
 Q_{S,I}(\lambda, T) =  \begin{bmatrix}
